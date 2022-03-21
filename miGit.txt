@@ -4,4 +4,4 @@
 2.2 Clonar un repositorio.
   -git clone "url".
 2.3 Encontrarnos ya en el repositorio.
-  -...
+  -..
