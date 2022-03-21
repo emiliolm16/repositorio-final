@@ -4,4 +4,6 @@
 2.2 Clonar un repositorio.
   -git clone "url".
 2.3 Encontrarnos ya en el repositorio.
-  -..
+  -....
+3. Ver estado del repositorio
+  git status.
