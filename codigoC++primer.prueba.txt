@@ -1,0 +1,85 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class Persona{
+    
+        // Set - Solicitar  la informacion de los atributos.
+        // Get - Te trae la informacion de los atributos
+        // VOID No va a devolver nada
+    
+    private:
+        char nombre [20];
+        int edad;
+        float altura;
+        int dni;
+        char letradni;
+        float sueldo;
+
+// FIN DE LA CLASE
+//---------------------------------------
+ //DEFINICION DE LOS METODOS DE LA CLASE 
+    public:
+         
+        void setSueldo (float nuevoSueldo);
+        void setAltura (float nuevaAltura);
+        void setEdad (int nuevaEdad);
+        void setLetradni (char nuevaLetra);
+ //------------------
+        float getSueldo ();
+        int getEdad ();
+        char getLetradni ();
+};
+
+    //FIN DE LA CLASE
+//------
+void Persona::setSueldo (float nuevoSueldo){
+    this -> sueldo = nuevoSueldo;
+}
+float Persona::getSueldo (){
+    return this-> sueldo;
+}
+//-------
+void Persona::setEdad (int nuevaEdad){
+    this -> edad = nuevaEdad;
+}
+int Persona::getEdad (){
+    return this -> edad;
+}
+// ------ 
+void Persona::setLetradni (char nuevaLetradni){
+     this -> letradni = nuevaLetradni;
+}
+char Persona::getLetradni () {
+    return this -> letradni;
+}
+//-------
+
+// #-INICIO DEL CODIGO PRINCIPAL-----------------
+int main() {
+    
+    Persona persona1;
+    
+    persona1.setSueldo (100);
+    cout << persona1.getSueldo() <<endl;
+    
+    persona1.setEdad(24);
+    cout <<persona1.getEdad () <<endl;
+    
+    persona1.setLetradni ('k');
+    cout <<persona1.getLetradni() <<endl;
+    
+    string palabra1 = "POLLA";
+    string palabra2 ;
+    palabra2 = palabra1;
+    cout << palabra2;
+    
+    char pla1[20]="zanahoria";
+    char pla2 [20];
+    
+    for (int i = 0; i < 20; i++){
+        pal2[i] = pal1[i];
+    }
+    cout <<pal2;
+    return 0;
+}

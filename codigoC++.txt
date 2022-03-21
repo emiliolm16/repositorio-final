@@ -1,0 +1,80 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class Persona{
+    private:
+        char nombre[20];
+        int edad;
+        float altura;
+        int dni;
+        char letra;
+        float sueldo;
+    public:
+        //Set - Introducen información en los atributos.
+        void setSueldo(float nuevoSueldo);
+        void setLetra(char nuevaLetra);
+        void setNombre(char nuevoNombre[20]);
+        //Get - Consultan la información de los atributos.
+        float getSueldo();
+        char getLetra();
+        char* getNombre();
+};// FIN DE LA CLASE
+
+// # --------------------------
+// DEFINICIÓN DE LOS MÉTODOS DE LA CLASE
+void Persona::setSueldo(float nuevoSueldo){
+    this->sueldo = nuevoSueldo;
+}
+void Persona::setLetra(char nuevaLetra){
+    this->letra = nuevaLetra;
+}
+void Persona::setNombre (char nuevoNombre[10]){
+    for (int i = 0 ; i < 20 ; i++){
+        this->nombre[i] = nuevoNombre[i];
+    }
+}
+
+float Persona::getSueldo(){
+    return this->sueldo;
+}
+char Persona::getLetra(){
+    return this->letra;
+}
+char* Persona::getNombre(){
+    return this->nombre;
+}
+
+// # --------------------------
+// FIN DE LA DEFINICIÓN DE MÉTODOS
+// # --------------------------
+// INICIO DEL CÓDIGO PRINCIPAL
+// # --------------------------
+int main() {
+
+    Persona persona1;
+    persona1.setSueldo(100);
+    cout << persona1.getSueldo() << endl;
+    persona1.setLetra('A');
+    cout << persona1.getLetra() << endl;
+
+    char nombre[20] = "Celia";
+    persona1.setNombre(nombre);
+    cout << persona1.getNombre() << endl;
+
+    //Diferencias entre string y char[]
+        char pal1[20]="zanahoria";
+        char pal2[20];
+        for (int i = 0 ; i < 20 ; i++){
+            pal2[i] = pal1[i];
+        }
+        cout << pal2 << endl;
+
+        string palabra1="patata";
+        string palabra2;
+        palabra2 = palabra1;
+        cout << palabra2 << endl;
+    // --------------------------------
+
+    return 0;
+}
